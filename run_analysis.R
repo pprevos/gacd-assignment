@@ -65,4 +65,4 @@ means_data <- all_data_tidy %>%
   group_by(subject_id, activity_name, feature) %>% 
   summarise(mean_measurement = mean(measurement))
 
-write_csv(means_data, "tidy_means.csv")
+write.table(means_data, "tidy_means.txt", row.names = FALSE)
